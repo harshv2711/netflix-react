@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NetflixSearch from "./NetflixSearch";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +69,7 @@ function Navbar() {
             <ul className="secondary-nav flex items-center gap-6">
               <li className="nav-item">
                 <div className="search-box">
-
+                 <NetflixSearch onSearch={(text) => console.log("search:", text)} />
                 </div>
               </li>
               <li className="nav-item">
