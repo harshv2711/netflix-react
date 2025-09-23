@@ -14,7 +14,7 @@ function HeroVideoPlayer() {
             <div className="m-auto">
                 <div className="media-wrapper">
                     <figure className="mediaFigure m-0 p-0 relative">
-                        <div className="video-wrapper">
+                        <div className="video-wrapper relative">
                             <video
                                 width="100%"
                                 height="auto"
@@ -25,28 +25,30 @@ function HeroVideoPlayer() {
                                 loop
                                 ref={videoRef}
                             >
-                                <source src="./pb-video-2.mp4" type="video/mp4" />
+                                <source src="./formula-2.mp4" type="video/mp4" />
                                 {/* <source src="/movie.ogg" type="video/ogg" /> */}
                                 {/* Fallback text */}
                                 Your browser does not support the HTML5 video tag.
                             </video>
+                              {/* <!-- Overlay: first 80px transparent, then black --> */}
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent from-[80px] to-black"></div>
                         </div>
 
                         <figcaption className="px-[57px] h-[810px] mediaFigcaption absolute top-0 left-0 right-0 flex items-center justify-between">
                             <div className="content h-[400px">
-                                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/S4oi7EPZbv2UEPaukW54OORa0S8/AAAABbVEzUOvDyYMrkqrjbW_9TP3T-8hK5JUi5E5bcnCyQTWQXFE68Hk6ZhIAwaXT1d3Hvt8KB3EHgymdOuvCm4fDo5dCk8eNC9ROA.webp?r=f38" alt="" srcset="" />
-                                <h1 className="mt-3 text-white font-bold text-2xl">Peaky Blinders</h1>
+                                <img src="./title-images/formula-title-img.webp" alt="" srcset="" />
+                                <h1 className="mt-3 text-white font-bold text-2xl"></h1>
                                 <ul className="flex items-center gap-2 my-2">
-                                    <li className="text-white">2022</li>
+                                    <li className="text-white">2025</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">6 Seasons</li>
+                                    <li className="text-white">7 Seasons</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">A</li>
+                                    <li className="text-white">U/A 16+</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">Dramas</li>
+                                    <li className="text-white">Documentary</li>
                                 </ul>
                                 <p className="text-white w-[50%]">
-                                    A notorious gang in 1919 Birmingham, England, is led by the fierce Tommy Shelby, a crime boss set on moving up in the world no matter the cost.
+                                   Drivers, managers and team owners live life in the fast lane both on and off the track during each cutthroat season of Formula 1 racing.
                                 </p>
                             </div>
 
@@ -71,7 +73,7 @@ function HeroVideoPlayer() {
                                     )}
                                 </button>
                                 <div className="maturity-rating w-fit bg-[rgba(51,51,51,.6)] pl-4 pr-18 border-l-2 h-[38px] border-white flex items-center">
-                                    <h1 className="text-white text-base">A</h1>
+                                    <h1 className="text-white text-base">U/A 16+</h1>
                                 </div>
                             </div>
                         </div>
