@@ -1,9 +1,14 @@
 function TitleDetailsCard() {
-    return <div className="title-details-card-wrapper fixed top-0 left-0 right-0 bottom-0 overflow-scroll z-20 ">
-        <figure className="title-details-card bg-[#181818] w-[880px] m-auto ">
-            <div className="title-details-media-wrapper relative">
+    return <div className="title-details-card-wrapper pt-6 fixed top-0 left-0 right-0 bottom-0 overflow-scroll z-20 bg-black/70 ">
+        <figure className="title-details-card bg-[#181818] w-[880px] m-auto rounded-t-md overflow-hidden">
+            <div className="title-details-media-wrapper relative ">
                 <img className="w-[100%]" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWtP69gLc_HIjEUcI5_hQX7YlH0M7qtzOHKA9jFD_wANaw7FzFmeL9-ekT9UKbCIjicyUeuj5R1dsCCM-RGECTuPe8jIgDwHDBoW.webp?r=239" alt="" srcset="" />
                 <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#181818] to-transparent" />
+
+                <div className="title-name-img-wrapper absolute bottom-0 left-0 px-10 max-w-[450px]">
+                    <img className="" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfF9iu4Bb-MIF-e5HD3eCp_UX5OEhGCx1GpGPjRrZCYIHBjOIlaZuTkMvQofbjKzF8SDaDLMLenmGKfpwnVUNYpsnYwBKEEQOKp8anuU-3KI6Nm3__12re4KwanJo73uRKdZami9HoeWfJtjJqX5Lt19_NVF7xjsAU3Ta55z3_5w78B_xbtV.webp?r=d59" alt="" srcset="" />
+                </div>
+                
             </div>
             <figcaption className="title-details-card-caption px-12">
                 <div className="meta-content-wrapper flex gap-12">
@@ -53,13 +58,29 @@ function TitleDetailsCard() {
                     </div>
                 </div>
                 <div className="espisode-list-wrapper" id="season-1">
-                    <p className="text-white flex items-center gap-2 text-sm">
+                    <p className="text-white flex items-center gap-2 text-sm my-2">
                         Season 1: 
                         <span className="text-[#bcbcbc] text-sm border px-2 border-gray-500">U/A 16+</span>
                         <span>language, mature themes, threat, violence</span>
                     </p>
                     <div className="espisode-list" id="season-1-episodes">
-
+                        <div className="episode text-white flex items-center px-6 py-6 gap-3 border">
+                            <div className="episode-number">
+                                1
+                            </div>
+                            <div className="episode-thumbnail">
+                                <img src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQU4hw8fUOGS7RAD39LQdxNOMzS4u65i1McIIGYHF6QCgTIp43CbZTPUj5ZMLCei4DWAF6vlSiAi_Ol5q5HCT1ciA0Fkvdpb6HW8ZLTsPZQyE10ICOi2OanK.jpg?r=952" alt="" srcset="" />
+                            </div>
+                            <div className="episode-info">
+                                <div className="episode-info-head flex items-center justify-between my-2 font-semibold">
+                                    <h1 className="text-base">Wednesday's Child Is Full of Woe</h1>
+                                    <h1 className="text-base font-normal">60m</h1>
+                                </div>
+                                <p className="text-sm text-[#d2d2d2]">
+                                    When a deliciously wicked prank gets Wednesday expelled, her parents ship her off to Nevermore Academy, the boarding school where they fell in love.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </figcaption>
