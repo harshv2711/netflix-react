@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import TitleDetailsCard from "./TitleDetailsCard"
+
 function HeroVideoPlayer() {
     const videoRef = useRef(null);
     const [muted, setMuted] = useState(true);
@@ -81,6 +83,7 @@ function HeroVideoPlayer() {
                 </div>
             </div>
         </section>
+        <TitleDetailsCard/>
     </>
 }
 export default HeroVideoPlayer;
