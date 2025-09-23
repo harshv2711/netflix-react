@@ -1,15 +1,41 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import TitleDetailsCard from "./TitleDetailsCard"
 
 function HeroVideoPlayer() {
     const videoRef = useRef(null);
     const [muted, setMuted] = useState(true);
 
+    const [audioAllowed, setAudioAllowed] = useState(false);
+
     const toggleMute = () => {
         if (!videoRef.current) return;
         videoRef.current.muted = !videoRef.current.muted;
         setMuted(videoRef.current.muted);
     };
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Autoplay muted initially
+        video.muted = true;
+        video.play().catch(() => {
+            // Autoplay might fail if not muted
+            console.log("Autoplay failed, probably no user interaction yet.");
+        });
+
+        // Listen for user interaction to enable audio
+        function enableAudio() {
+            setAudioAllowed(true);
+            video.muted = false;
+            video.play();
+            window.removeEventListener("click", enableAudio);
+        }
+
+        window.addEventListener("click", enableAudio);
+
+        return () => window.removeEventListener("click", enableAudio);
+    }, []);
 
     return <>
         <section className="">
@@ -22,8 +48,6 @@ function HeroVideoPlayer() {
                                 height="auto"
                                 preload="metadata"
                                 playsInline
-                                muted
-                                autoPlay
                                 loop
                                 ref={videoRef}
                             >
@@ -32,8 +56,8 @@ function HeroVideoPlayer() {
                                 {/* Fallback text */}
                                 Your browser does not support the HTML5 video tag.
                             </video>
-                              {/* <!-- Overlay: first 80px transparent, then black --> */}
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent from-[80px] to-black"></div>
+                            {/* <!-- Overlay: first 80px transparent, then black --> */}
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent from-[80px] to-black"></div>
                         </div>
 
                         <figcaption className="px-[57px] h-[810px] mediaFigcaption absolute top-0 left-0 right-0 flex items-center justify-between">
@@ -50,7 +74,7 @@ function HeroVideoPlayer() {
                                     <li className="text-white">Documentary</li>
                                 </ul>
                                 <p className="text-white w-[50%]">
-                                   Drivers, managers and team owners live life in the fast lane both on and off the track during each cutthroat season of Formula 1 racing.
+                                    Drivers, managers and team owners live life in the fast lane both on and off the track during each cutthroat season of Formula 1 racing.
                                 </p>
                             </div>
 
@@ -83,7 +107,7 @@ function HeroVideoPlayer() {
                 </div>
             </div>
         </section>
-        <TitleDetailsCard/>
+        {/* <TitleDetailsCard /> */}
     </>
 }
 export default HeroVideoPlayer;

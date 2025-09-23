@@ -1,14 +1,17 @@
 function TitleDetailsCard() {
-    return <div className="title-details-card-wrapper pt-6 fixed top-0 left-0 right-0 bottom-0 overflow-scroll z-20 bg-black/70 ">
-        <figure className="title-details-card bg-[#181818] w-[880px] m-auto rounded-t-md overflow-hidden">
+    return <div className="title-details-card-wrapper pt-6 fixed top-0 left-0 right-0 bottom-0 overflow-y-scroll z-20 bg-black/70 ">
+        <figure className="title-details-card bg-[#181818] w-[880px] m-auto rounded-t-md overflow-hidden relative">
+            <button className="closeTitleDetailsCardBtn w-fit block absolute top-5 right-5 z-10 bg-[#181818] rounded-full p-1.5 cursor-pointer">
+                <svg className="text-white" viewBox="0 0 24 24" width="16" height="16" data-icon="XMedium" data-icon-id=":r1r:" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" role="img">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z" fill="currentColor"></path>
+                </svg>
+            </button>
             <div className="title-details-media-wrapper relative ">
                 <img className="w-[100%]" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWtP69gLc_HIjEUcI5_hQX7YlH0M7qtzOHKA9jFD_wANaw7FzFmeL9-ekT9UKbCIjicyUeuj5R1dsCCM-RGECTuPe8jIgDwHDBoW.webp?r=239" alt="" srcset="" />
                 <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#181818] to-transparent" />
-
                 <div className="title-name-img-wrapper absolute bottom-0 left-0 px-10 max-w-[450px]">
                     <img className="" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfF9iu4Bb-MIF-e5HD3eCp_UX5OEhGCx1GpGPjRrZCYIHBjOIlaZuTkMvQofbjKzF8SDaDLMLenmGKfpwnVUNYpsnYwBKEEQOKp8anuU-3KI6Nm3__12re4KwanJo73uRKdZami9HoeWfJtjJqX5Lt19_NVF7xjsAU3Ta55z3_5w78B_xbtV.webp?r=d59" alt="" srcset="" />
                 </div>
-                
             </div>
             <figcaption className="title-details-card-caption px-12">
                 <div className="meta-content-wrapper flex gap-12">
@@ -32,8 +35,8 @@ function TitleDetailsCard() {
                             <li className="text-[#bcbcbc] text-sm border px-2 border-gray-500 w-fit">U/A 16+</li>
                             <li className="text-white text-sm">gore, violence</li>
                         </ul>
-                        <h1 className="text-xl text-white my-2">Watch All Season on 2 Now</h1>
-                        <p className="text-sm text-white">
+                        <h1 className="text-xl text-white my-3 font-semibold mb-6">Watch All Season on 2 Now</h1>
+                        <p className="text-base text-white">
                             Wednesday Addams never fits in — and she likes it that way. Nevermore Academy is the perfect place for an outcast with budding psychic powers.
                         </p>
                     </div>
@@ -52,24 +55,33 @@ function TitleDetailsCard() {
                 <div className="episodes-wrapper text-white">
                     <div className="episodes-header my-6 flex items-center justify-between">
                         <h1 className="text-white font-semibold text-2xl ">Episodes</h1>
-                        <select name="episode" id="" className="border rounded py-[9px] px-[18px] text-[18px] border-[#777] bg-[#242424]">
+                        <select name="episode" id="" className="w-[160px] border rounded py-[9px] px-[18px] text-[18px] border-[#777] bg-[#242424]">
                             <option value="1">Season 1</option>
                         </select>
                     </div>
                 </div>
                 <div className="espisode-list-wrapper" id="season-1">
                     <p className="text-white flex items-center gap-2 text-sm my-2">
-                        Season 1: 
+                        Season 1:
                         <span className="text-[#bcbcbc] text-sm border px-2 border-gray-500">U/A 16+</span>
                         <span>language, mature themes, threat, violence</span>
                     </p>
-                    <div className="espisode-list" id="season-1-episodes">
-                        <div className="episode text-white flex items-center px-6 py-6 gap-3 border">
-                            <div className="episode-number">
+                    <div className="espisode-list pb-6" id="season-1-episodes">
+                        <div className="episode group text-white flex items-center px-6 py-6 gap-3 bg-[#242424]">
+                            <div className="episode-number text-2xl font-light pr-3">
                                 1
                             </div>
-                            <div className="episode-thumbnail">
-                                <img src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQU4hw8fUOGS7RAD39LQdxNOMzS4u65i1McIIGYHF6QCgTIp43CbZTPUj5ZMLCei4DWAF6vlSiAi_Ol5q5HCT1ciA0Fkvdpb6HW8ZLTsPZQyE10ICOi2OanK.jpg?r=952" alt="" srcset="" />
+                            <div className="episode-thumbnail relative">
+                                <img className="rounded" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQU4hw8fUOGS7RAD39LQdxNOMzS4u65i1McIIGYHF6QCgTIp43CbZTPUj5ZMLCei4DWAF6vlSiAi_Ol5q5HCT1ciA0Fkvdpb6HW8ZLTsPZQyE10ICOi2OanK.jpg?r=952" alt="" />
+
+                                {/* Hover Play Icon */}
+                                <span className="icon-wrapper absolute top-0 bottom-0 left-0 right-0 group-hover:flex hidden items-center justify-center">
+                                    <span className="border rounded-full block w-fit p-3">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" data-icon="PlayMedium" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                </span>
                             </div>
                             <div className="episode-info">
                                 <div className="episode-info-head flex items-center justify-between my-2 font-semibold">
@@ -81,6 +93,34 @@ function TitleDetailsCard() {
                                 </p>
                             </div>
                         </div>
+
+                        <div className="episode group text-white flex items-center px-6 py-6 gap-3 border-b border-[#777] rounded">
+                            <div className="episode-number text-2xl font-light pr-3">
+                                2
+                            </div>
+                            <div className="episode-thumbnail relative">
+                                <img className="rounded" src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQU4hw8fUOGS7RAD39LQdxNOMzS4u65i1McIIGYHF6QCgTIp43CbZTPUj5ZMLCei4DWAF6vlSiAi_Ol5q5HCT1ciA0Fkvdpb6HW8ZLTsPZQyE10ICOi2OanK.jpg?r=952" alt="" />
+
+                                {/* Hover Play Icon */}
+                                <span className="icon-wrapper absolute top-0 bottom-0 left-0 right-0 group-hover:flex hidden items-center justify-center">
+                                    <span className="border rounded-full block w-fit p-3">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" data-icon="PlayMedium" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                            <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                            <div className="episode-info">
+                                <div className="episode-info-head flex items-center justify-between my-2 font-semibold">
+                                    <h1 className="text-base">Wednesday's Child Is Full of Woe</h1>
+                                    <h1 className="text-base font-normal">60m</h1>
+                                </div>
+                                <p className="text-sm text-[#d2d2d2]">
+                                    When a deliciously wicked prank gets Wednesday expelled, her parents ship her off to Nevermore Academy, the boarding school where they fell in love.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </figcaption>

@@ -5,7 +5,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/pagination'
 
 function MySwiper() {
     return (
@@ -15,13 +15,13 @@ function MySwiper() {
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={6}
                 slidesPerView={6}
-                navigation={false}
+                navigation={true}
                 pagination={false}
                 autoplay={false}
                 loop={true}
             >
                 <SwiperSlide>
-                    <figure className='swiperTitleCard'>
+                    <figure className='swiperTitleCard hover:transform'>
                         <img src="https://occ-0-3209-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRfr4c2zAcbcrUBPSYy3sigtabktDbJ2aQglchPVW-ASoFOwSY6GqPNHaaHFB03IaNpsMo7PSFO3mSYKRU6-KDQpCU3obgESas4.webp?r=46d" alt="The Office Poster" />
                         <figcaption className='hidden'>
                             <div className="menu-wrapper flex items-center gap-2 my-3">
