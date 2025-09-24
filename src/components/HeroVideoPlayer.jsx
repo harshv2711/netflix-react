@@ -16,7 +16,6 @@ function HeroVideoPlayer({videoLink, titleImage, year, totalSeason, adultRating,
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
-
         // Autoplay muted initially
         video.muted = true;
         video.play().catch(() => {
@@ -78,7 +77,6 @@ function HeroVideoPlayer({videoLink, titleImage, year, totalSeason, adultRating,
                                    {synopsis}
                                 </p>
                             </div>
-
                         </figcaption>
                         <div className="media-controller-wrapper absolute top-[60%] right-0">
                             <div className="media-contoller flex items-center gap-3">
@@ -108,7 +106,7 @@ function HeroVideoPlayer({videoLink, titleImage, year, totalSeason, adultRating,
                 </div>
             </div>
         </section>
-        {/* <TitleDetailsCard /> */}
+        <TitleDetailsCard />
     </>
 }
 export default HeroVideoPlayer;

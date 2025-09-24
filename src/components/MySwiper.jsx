@@ -18,7 +18,9 @@ function MySwiper() {
                 navigation={true}
                 pagination={false}
                 autoplay={false}
-                loop={true}
+                loop={false}
+                slidesPerGroup={6}
+                speed={900}
             >
                 <SwiperSlide>
                     <figure className='swiperTitleCard hover:transform'>
