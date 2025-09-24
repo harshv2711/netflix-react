@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import HeroVideoPlayer from "./components/HeroVideoPlayer"
-import MySwiper from "./components/MySwiper"
-import CollectionWrapper from './components/CollectionWrapper'
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TVShowsPage from "./pages/TVShowsPage"
+import MoviesPage from "./pages/MoviesPage"
 
 function App() {
-  return <> 
-    <Navbar/>
-    <HeroVideoPlayer/>
-    <CollectionWrapper/>
-  </>
+  return (
+    <main className='main-content'>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/TV-Shows" element={<TVShowsPage/>}/>
+        <Route path="/movies" element={<MoviesPage/>}/>
+      </Routes> 
+    </main>
+  )
 }
-
 export default App

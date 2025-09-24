@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import TitleDetailsCard from "./TitleDetailsCard"
 
-function HeroVideoPlayer() {
+function HeroVideoPlayer({videoLink, titleImage, year, totalSeason, adultRating, genre, synopsis}) {
     const videoRef = useRef(null);
     const [muted, setMuted] = useState(true);
 
@@ -28,11 +28,12 @@ function HeroVideoPlayer() {
         function enableAudio() {
             setAudioAllowed(true);
             video.muted = false;
+            setMuted(false)
             video.play();
             window.removeEventListener("click", enableAudio);
         }
 
-        window.addEventListener("click", enableAudio);
+        // window.addEventListener("click", enableAudio);
 
         return () => window.removeEventListener("click", enableAudio);
     }, []);
@@ -51,7 +52,7 @@ function HeroVideoPlayer() {
                                 loop
                                 ref={videoRef}
                             >
-                                <source src="./formula-2.mp4" type="video/mp4" />
+                                <source src={videoLink} type="video/mp4" />
                                 {/* <source src="/movie.ogg" type="video/ogg" /> */}
                                 {/* Fallback text */}
                                 Your browser does not support the HTML5 video tag.
@@ -62,19 +63,19 @@ function HeroVideoPlayer() {
 
                         <figcaption className="px-[57px] h-[810px] mediaFigcaption absolute top-0 left-0 right-0 flex items-center justify-between">
                             <div className="content h-[400px">
-                                <img src="./title-images/formula-title-img.webp" alt="" srcset="" />
+                                <img src={titleImage} alt="" srcset="" />
                                 <h1 className="mt-3 text-white font-bold text-2xl"></h1>
                                 <ul className="flex items-center gap-2 my-2">
-                                    <li className="text-white">2025</li>
+                                    <li className="text-white">{year}</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">7 Seasons</li>
+                                    <li className="text-white">{totalSeason}</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">U/A 16+</li>
+                                    <li className="text-white">{adultRating}</li>
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
-                                    <li className="text-white">Documentary</li>
+                                    <li className="text-white">{genre}</li>
                                 </ul>
                                 <p className="text-white w-[50%]">
-                                    Drivers, managers and team owners live life in the fast lane both on and off the track during each cutthroat season of Formula 1 racing.
+                                   {synopsis}
                                 </p>
                             </div>
 

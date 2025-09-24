@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NetflixSearch from "./NetflixSearch";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,39 +31,39 @@ function Navbar() {
           <nav className="flex items-center justify-between w-full">
             <ul className="primary-nav flex items-center gap-5">
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="/" className="nav-link text-sm text-gray-300">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="/TV-shows" className="nav-link text-sm text-gray-300">
                   Shows
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="/movies" className="nav-link text-sm text-gray-300">
                   Movies
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="#" className="nav-link text-sm text-gray-300">
                   Games
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="#" className="nav-link text-sm text-gray-300">
                   News & Popular
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="#" className="nav-link text-sm text-gray-300">
                   My List
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-sm text-gray-300">
+                <NavLink to="#" className="nav-link text-sm text-gray-300">
                   Browse by Languages
-                </a>
+                </NavLink>
               </li>
             </ul>
 
@@ -73,7 +74,7 @@ function Navbar() {
                 </div>
               </li>
               <li className="nav-item">
-                <a href="#" className="text-white text-sm">Children</a>
+                <NavLink to="#" className="text-white text-sm">Children</NavLink>
               </li>
               <li className="nav-item notification">
                 <span>
@@ -85,8 +86,8 @@ function Navbar() {
               </li>
               <li className="nav-item user-account">
                 <div className="account-dropdown-button flex items-center">
-                  <a
-                    href="/YourAccount"
+                  <NavLink
+                    to="/YourAccount"
                     role="button"
                     tabIndex={0}
                     aria-haspopup="true"
@@ -101,7 +102,7 @@ function Navbar() {
                         alt=""
                       />
                     </span>
-                  </a>
+                  </NavLink>
 
                   {/* Caret */}
                   <span
