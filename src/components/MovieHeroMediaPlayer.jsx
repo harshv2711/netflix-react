@@ -43,7 +43,7 @@ function MovieHeroMediaPlayer({videoLink, titleImage, year, totalSeason, adultRa
             <div className="m-auto">
                 <div className="media-wrapper">
                     <figure className="mediaFigure m-0 p-0 relative">
-                        <div className="video-wrapper relative">
+                        <div className="video-wrapper relative overflow-hidden">
                             <video
                                 width="100%"
                                 height="auto"
@@ -51,7 +51,7 @@ function MovieHeroMediaPlayer({videoLink, titleImage, year, totalSeason, adultRa
                                 playsInline
                                 loop
                                 ref={videoRef}
-                                className="mt-[-92px]"
+                                className="scale-150 mb-1"
                             >
                                 <source src={videoLink} type="video/mp4" />
                                 {/* <source src="/movie.ogg" type="video/ogg" /> */}
@@ -64,7 +64,7 @@ function MovieHeroMediaPlayer({videoLink, titleImage, year, totalSeason, adultRa
 
                         <figcaption className="px-[57px] h-[810px] mediaFigcaption absolute top-0 left-0 right-0 flex items-center justify-between">
                             <div className="content h-[400px">
-                                <img src={titleImage} alt="" srcset="" />
+                                <img className="max-w-[40%]" src={titleImage} alt="" srcset="" />
                                 <h1 className="mt-3 text-white font-bold text-2xl"></h1>
                                 <ul className="flex items-center gap-2 my-2">
                                     <li className="text-white">{year}</li>
@@ -73,7 +73,7 @@ function MovieHeroMediaPlayer({videoLink, titleImage, year, totalSeason, adultRa
                                     <li className="h-1 w-1 bg-gray-300 rounded"></li>
                                     <li className="text-white">{genre}</li>
                                 </ul>
-                                <p className="text-white w-[50%]">
+                                <p className="text-white w-[45%]">
                                    {synopsis}
                                 </p>
                             </div>

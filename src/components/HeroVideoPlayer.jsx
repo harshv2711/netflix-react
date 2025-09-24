@@ -100,13 +100,13 @@ function HeroVideoPlayer({videoLink, titleImage, year, totalSeason, adultRating,
                                 <div className="maturity-rating w-fit bg-[rgba(51,51,51,.6)] pl-4 pr-18 border-l-2 h-[38px] border-white flex items-center">
                                     <h1 className="text-white text-base">U/A 16+</h1>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                     </figure>
                 </div>
             </div>
         </section>
-        <TitleDetailsCard />
+        {/* <TitleDetailsCard /> */}
     </>
 }
 export default HeroVideoPlayer;

@@ -2,7 +2,11 @@
 import Navbar from "../components/Navbar"
 import HeroVideoPlayer from "../components/HeroVideoPlayer"
 import CollectionWrapper from "../components/CollectionWrapper"
+import TitleDetailsCard from "../components/TitleDetailsCard"
+import { useRef } from "react"
+
 function HomePage() {
+    const titleDetailsCardElement = useRef();
     return <>
         <Navbar/>
         <HeroVideoPlayer 
@@ -15,6 +19,7 @@ function HomePage() {
             synopsis=" Drivers, managers and team owners live life in the fast lane both on and off the track during each cutthroat season of Formula 1 racing."
         />
         <CollectionWrapper/>
+        <TitleDetailsCard/>
     </> 
    
 }

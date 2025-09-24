@@ -1,7 +1,15 @@
+import { useRef } from "react";
+
 function TitleDetailsCard() {
-    return <div className="title-details-card-wrapper pt-6 fixed top-0 left-0 right-0 bottom-0 overflow-y-scroll z-20 bg-black/70 ">
+    const TitleDetailsCardElement = useRef();
+
+    return <div ref={TitleDetailsCardElement} className="title-details-card-wrapper pt-6 fixed top-0 left-0 right-0 bottom-0 overflow-y-scroll z-20 bg-black/70 ">
         <figure className="title-details-card bg-[#181818] w-[880px] m-auto rounded-t-md overflow-hidden relative">
-            <button className="closeTitleDetailsCardBtn w-fit block absolute top-5 right-5 z-10 bg-[#181818] rounded-full p-1.5 cursor-pointer">
+            <button onClick={() => {
+    if (TitleDetailsCardElement.current) {
+      TitleDetailsCardElement.current.style.display = "none";
+    }
+  }}  className="closeTitleDetailsCardBtn w-fit block absolute top-5 right-5 z-10 bg-[#181818] rounded-full p-1.5 cursor-pointer">
                 <svg className="text-white" viewBox="0 0 24 24" width="16" height="16" data-icon="XMedium" data-icon-id=":r1r:" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" role="img">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z" fill="currentColor"></path>
                 </svg>

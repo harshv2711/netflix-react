@@ -5,7 +5,7 @@ import MoviesPage from "./pages/MoviesPage"
 
 function App() {
   return (
-    <main className='main-content'>
+    <main className='main-content relative'>
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/TV-Shows" element={<TVShowsPage/>}/>
